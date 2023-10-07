@@ -183,7 +183,6 @@ if [ $FWTYPE == "dynamic" ]; then
             $BUNDLE_BITCODE \
             -lSystem \
             -arch $ARCH \
-            $MIN_SDK \
             -syslibroot $SDK \
             -compatibility_version $COMPAT_VERSION \
             -current_version $CURRENT_VERSION \
