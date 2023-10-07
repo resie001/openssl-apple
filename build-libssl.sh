@@ -30,10 +30,6 @@ DEFAULTVERSION="1.1.1q"
 # Default (=full) set of targets (OpenSSL >= 1.1.1) to build
 DEFAULTTARGETS=`cat <<TARGETS
 ios-sim-cross-x86_64 ios-sim-cross-arm64 ios64-cross-arm64 ios64-cross-arm64e
-macos64-x86_64 macos64-arm64
-mac-catalyst-x86_64 mac-catalyst-arm64
-watchos-cross-armv7k watchos-cross-arm64_32 watchos-sim-cross-x86_64 watchos-sim-cross-i386 watchos-sim-cross-arm64
-tvos-sim-cross-x86_64 tvos64-cross-arm64
 TARGETS`
 
 # Minimum iOS/tvOS SDK version to build for
@@ -56,14 +52,6 @@ echo_help()
   echo "     --ec-nistp-64-gcc-128         Enable configure option enable-ec_nistp_64_gcc_128 for 64 bit builds"
   echo " -h, --help                        Print help (this message)"
   echo "     --ios-sdk=SDKVERSION          Override iOS SDK version"
-  echo "     --macos-sdk=SDKVERSION        Override macOS SDK version"
-  echo "     --catalyst-sdk=SDKVERSION     Override macOS SDK version for Catalyst"
-  echo "     --watchos-sdk=SDKVERSION      Override watchOS SDK version"
-  echo "     --tvos-sdk=SDKVERSION         Override tvOS SDK version"
-  echo "     --min-ios-sdk=SDKVERSION      Set minimum iOS SDK version (default: $IOS_MIN_SDK_VERSION)"
-  echo "     --min-macos-sdk=SDKVERSION    Set minimum macOS SDK version (default: $MACOS_MIN_SDK_VERSION)"
-  echo "     --min-watchos-sdk=SDKVERSION  Set minimum watchOS SDK version (default: $WATCHOS_MIN_SDK_VERSION)"
-  echo "     --min-tvos-sdk=SDKVERSION     Set minimum tvOS SDK version (default: $TVOS_MIN_SDK_VERSION)"
   echo "     --noparallel                  Disable running make with parallel jobs (make -j)"
   echo " -v, --verbose                     Enable verbose logging"
   echo "     --verbose-on-error            Dump last 500 lines from log file if an error occurs (for Travis builds)"
